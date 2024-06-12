@@ -1,0 +1,10 @@
+---
+- name: Create a test directory in /home/ubuntu
+  hosts: all
+  become: yes
+  tasks:
+    - name: Create test directory
+      file:
+        path: /home/ubuntu/test
+        state: directory
+        mode: '0755'
